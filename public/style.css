@@ -1,0 +1,420 @@
+:root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #17202a;
+    --muted: #667085;
+    --line: #d9dee7;
+    --brand: #2364aa;
+    --brand-dark: #174a7c;
+    --accent: #1f8a70;
+    --danger: #b42318;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar {
+    align-items: center;
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: 0 32px;
+}
+
+.brand {
+    color: var(--brand);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 18px;
+}
+
+.topbar nav a {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.topbar nav a:hover {
+    color: var(--brand);
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 32px 20px 56px;
+}
+
+.hero,
+.panel,
+.auth-panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(23, 32, 42, 0.06);
+}
+
+.hero {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 28px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    margin: 0 0 18px;
+}
+
+.hero h1 {
+    margin-bottom: 0;
+}
+
+.auth-panel {
+    margin: 42px auto;
+    max-width: 430px;
+    padding: 28px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    padding: 24px;
+}
+
+.wide {
+    max-width: none;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 20px;
+}
+
+.tile {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.tile span {
+    color: var(--brand);
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tile strong {
+    font-size: 22px;
+}
+
+.form {
+    display: grid;
+    gap: 16px;
+}
+
+.two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.toolbar {
+    align-items: end;
+    grid-template-columns: 1fr 1fr auto;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    color: var(--muted);
+    display: grid;
+    font-size: 14px;
+    font-weight: 700;
+    gap: 7px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--text);
+    font: inherit;
+    padding: 11px 12px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button,
+.button {
+    background: var(--brand);
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-weight: 700;
+    justify-content: center;
+    padding: 11px 18px;
+}
+
+button:hover,
+.button:hover {
+    background: var(--brand-dark);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alert,
+.success {
+    border-radius: 6px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    padding: 11px 14px;
+}
+
+.alert {
+    background: #fff1f0;
+    color: var(--danger);
+}
+
+.success {
+    background: #eaf7f2;
+    color: #0f6b52;
+}
+
+.mcq-options {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border-bottom: 1px solid var(--line);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.paper-settings {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 24px;
+}
+
+.question-list {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.question-row {
+    align-items: start;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    display: grid;
+    gap: 14px;
+    grid-template-columns: auto 1fr auto;
+    padding: 14px;
+}
+
+.question-row:last-child {
+    border-bottom: 0;
+}
+
+.question-row input {
+    margin-top: 5px;
+    width: auto;
+}
+
+.question-row small {
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+}
+
+.question-row em,
+.question-title em {
+    color: var(--muted);
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.empty {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.paper {
+    background: white;
+    border: 1px solid var(--line);
+    margin: 0 auto;
+    max-width: 860px;
+    min-height: 1000px;
+    padding: 44px;
+}
+
+.paper-head {
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    text-align: center;
+}
+
+.paper-head dl {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 0 0;
+}
+
+.paper-head div {
+    border: 1px solid var(--line);
+    padding: 10px;
+}
+
+.paper-head dt {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paper-head dd {
+    margin: 0;
+}
+
+.print-questions {
+    padding-left: 24px;
+}
+
+.print-questions > li {
+    margin-bottom: 22px;
+}
+
+.question-title {
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+}
+
+.options {
+    display: grid;
+    gap: 7px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.print-button {
+    margin-top: 24px;
+}
+
+@media (max-width: 720px) {
+    .topbar,
+    .hero {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .topbar nav {
+        flex-wrap: wrap;
+    }
+
+    .grid,
+    .two-column,
+    .toolbar,
+    .paper-settings,
+    .mcq-options,
+    .paper-head dl,
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .question-row {
+        grid-template-columns: auto 1fr;
+    }
+
+    .question-row em {
+        grid-column: 2;
+    }
+
+    .paper {
+        padding: 24px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .topbar,
+    .print-button {
+        display: none;
+    }
+
+    .page {
+        max-width: none;
+        padding: 0;
+    }
+
+    .paper {
+        border: 0;
+        box-shadow: none;
+        max-width: none;
+        min-height: 0;
+    }
+}
